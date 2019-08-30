@@ -7,6 +7,7 @@
 <body onload="colors()">
 	<div id="body" onclick="showControls()"></div>
 	<div id="controls">
+
 		<div class="group">
 			<div class="title">Speed</div>
 			<div id="speedNone" class="button" onclick="setSpeed('none')">None</div>
@@ -14,10 +15,18 @@
 			<div id="speedMedium" class="button" onclick="setSpeed('medium')">Medium</div>
 			<div id="speedHigh" class="button" onclick="setSpeed('high')">High</div>
 		</div>
+
+		<div class="group">
+			<div class="title">Fade</div>
+			<div id="fadeOn" class="button-pressed" onclick="setFade(true)">On</div>
+			<div id="fadeOff" class="button" onclick="setFade(false)">Off</div> 
+		</div>
+
 		<div class="group">
 			<div class="title">Controls</div>
 			<div class="button" onclick="hideControls()">Hide</div>
 			<div class="desc">Click anywhere to<br>show controls again</div>
 		</div>
+
 	</div>
 </body>

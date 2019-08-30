@@ -1,28 +1,46 @@
-let speed = 100;
+let speed = 100,
+    fade = true;
 
 function colors() {
-	let r=255,
-	    g=0,
-	    b=0;
+	let r = 255,
+	    g = 0,
+	    b = 0,
+	    i = 0;
+	    colors = [
+	    	"255, 0, 0",
+	    	"255, 255, 0",
+	    	"0, 255, 0",
+	    	"0, 255, 255",
+	    	"0, 0, 255",
+	    	"255, 0, 255"
+	    ];
 
 	function periodicall() {
-		if (speed !== 2) {
-			if (r > 0 && b == 0) {
-				r--;
-				g++;
+		if (fade) {
+			if (speed !== 2) {
+				if (r > 0 && b == 0) {
+					r--;
+					g++;
+				};
+				if (g > 0 && r == 0) {
+					g--;
+					b++;
+				};
+				if (b > 0 && g == 0) {
+					r++;
+					b--;
+				};
+				document.body.style.background = `rgb(${r}, ${g}, ${b})`;
 			};
-			if (g > 0 && r == 0) {
-				g--;
-				b++;
-			};
-			if (b > 0 && g == 0) {
-				r++;
-				b--;
-			};
-			document.body.style.background = `rgb(${r},${g},${b})`;
-		};
+		} else {
+			if (speed !== 2) {
+				if (i % 10 === 0) document.body.style.background = `rgb(${colors[i/10]})`
+				i++;
+				if (i === 60) i = 0;
+			}
+		}
 		setTimeout(periodicall, speed);
-	};
+	}
 	periodicall();
 }
 
@@ -60,4 +78,15 @@ function setSpeed(setting) {
 			speed = 1;
 			break;
 	}
+}
+
+function setFade(setting) {
+	if (setting) {
+		document.getElementById("fadeOn").className = "button-pressed";
+		document.getElementById("fadeOff").className = "button";
+	} else {
+		document.getElementById("fadeOn").className = "button";
+		document.getElementById("fadeOff").className = "button-pressed";
+	}
+	fade = setting;
 }
