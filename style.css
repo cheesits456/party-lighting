@@ -57,43 +57,43 @@ body {
 	bottom: 2em;
 }
 
-.hover-darkred:hover {
+#color-darkred:hover {
 	background-color: darkred;
 }
 
-.hover-red:hover {
+#color-red:hover {
 	background-color: red;
 }
 
-.hover-orange:hover {
+#color-orangered:hover {
 	background-color: orangered;
 }
 
-.hover-yellow:hover {
+#color-yellow:hover {
 	background-color: yellow;
 }
 
-.hover-lime:hover {
+#color-lime:hover {
 	background-color: lime;
 }
 
-.hover-green:hover {
+#color-green:hover {
 	background-color: green;
 }
 
-.hover-blue:hover {
+#color-blue:hover {
 	background-color: blue;
 }
 
-.hover-cyan:hover {
+#color-cyan:hover {
 	background-color: cyan;
 }
 
-.hover-magenta:hover {
+#color-magenta:hover {
 	background-color: magenta;
 }
 
-.hover-purple:hover {
+#color-purple:hover {
 	background-color: purple;
 }
 
