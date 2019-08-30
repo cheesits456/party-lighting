@@ -1,0 +1,22 @@
+<!DOCTYPE="html">
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type="text/javascript" src="./script.js"></script>
+</head>
+<body onload="colors()">
+	<div id="body" onclick="showControls()"></div>
+	<div id="controls">
+		<div class="group">
+			<div class="title">Speed</div>
+			<div id="speedNone" class="button" onclick="setSpeed('none')">None</div>
+			<div id="speedLow" class="button-pressed" onclick="setSpeed('low')">Low</div>
+			<div id="speedMedium" class="button" onclick="setSpeed('medium')">Medium</div>
+			<div id="speedHigh" class="button" onclick="setSpeed('high')">High</div>
+		</div>
+		<div class="group">
+			<div class="title">Controls</div>
+			<div class="button" onclick="hideControls()">Hide</div>
+		</div>
+	</div>
+</body>
