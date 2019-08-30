@@ -57,7 +57,7 @@ function hideControls() {
 }
 
 function setSpeed(setting) {
-	["speedNone", "speedLow", "speedMedium", "speedHigh"].forEach((id) => {
+	["speedNone", "speedLow", "speedMedium", "speedHigh"].forEach(id => {
 		document.getElementById(id).className = "button";
 	})
 	switch (setting) {
@@ -94,8 +94,12 @@ function setFade(setting) {
 function setColor(setting) {
 	speed = 2;
 	document.getElementById("speedNone").className = "button-pressed";
-	["speedLow", "speedMedium", "speedHigh"].forEach((a) => {
+	["speedLow", "speedMedium", "speedHigh"].forEach(a => {
 		document.getElementById(a).className = "button";
-	})
+	});
+	["red", "yellow", "lime", "cyan", "magenta", "darkred", "orangered", "green", "blue", "purple"].forEach(a => {
+		if (a !== setting) document.getElementById(`color-${a}`).className = "button";
+		else document.getElementById(`color-${setting}`).className = "button-pressed";
+	});
 	document.body.style.background = setting;
 }
