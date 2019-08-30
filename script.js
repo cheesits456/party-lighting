@@ -57,6 +57,9 @@ function hideControls() {
 }
 
 function setSpeed(setting) {
+	["red", "yellow", "lime", "cyan", "magenta", "darkred", "orangered", "green", "blue", "purple"].forEach(a => {
+		document.getElementById(`color-${a}`).className = "button";
+	});
 	["speedNone", "speedLow", "speedMedium", "speedHigh"].forEach(id => {
 		document.getElementById(id).className = "button";
 	})
