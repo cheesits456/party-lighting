@@ -90,3 +90,12 @@ function setFade(setting) {
 	}
 	fade = setting;
 }
+
+function setColor(setting) {
+	speed = 2;
+	document.getElementById("speedNone").className = "button-pressed";
+	["speedLow", "speedMedium", "speedHigh"].forEach((a) => {
+		document.getElementById(a).className = "button";
+	})
+	document.body.style.background = setting;
+}

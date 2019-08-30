@@ -56,3 +56,54 @@ body {
 	position: absolute;
 	bottom: 2em;
 }
+
+.hover-darkred:hover {
+	background-color: darkred;
+}
+
+.hover-red:hover {
+	background-color: red;
+}
+
+.hover-orange:hover {
+	background-color: orangered;
+}
+
+.hover-yellow:hover {
+	background-color: yellow;
+}
+
+.hover-lime:hover {
+	background-color: lime;
+}
+
+.hover-green:hover {
+	background-color: green;
+}
+
+.hover-blue:hover {
+	background-color: blue;
+}
+
+.hover-cyan:hover {
+	background-color: cyan;
+}
+
+.hover-magenta:hover {
+	background-color: magenta;
+}
+
+.hover-purple:hover {
+	background-color: purple;
+}
+
+.column {
+	float: left;
+	width: 50%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
