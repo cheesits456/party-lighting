@@ -1,4 +1,4 @@
-let speed = 100,
+let speed = 10,
     fade = true;
 
 function colors() {
